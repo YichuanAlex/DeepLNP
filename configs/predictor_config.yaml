@@ -1,0 +1,93 @@
+# DeepLNP 配置示例
+
+# 模型配置
+model:
+  model_type: "deeplnp"
+  encoder_type: "multimodal"
+  hidden_dim: 512
+  num_layers: 6
+  num_heads: 8
+  dropout: 0.1
+  
+  # 3D 编码器
+  use_3d: true
+  embed_dim: 768
+  ffn_embed_dim: 3072
+  
+  # 图编码器
+  atom_feature_dim: 39
+  bond_feature_dim: 4
+  
+  # 融合方式
+  fusion_type: "cross_attention"
+  num_experts: 4
+  
+  # 预测头
+  num_tasks: 4
+  task_weights: [1.0, 0.5, 0.3, 0.5]
+
+# 训练配置
+training:
+  # 数据
+  data_dir: "data/processed"
+  dataset_name: "lnp_atlas"
+  split_strategy: "scaffold"
+  
+  # 训练参数
+  batch_size: 32
+  num_epochs: 200
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  warmup_epochs: 10
+  
+  # 优化器
+  optimizer: "adamw"
+  scheduler: "cosine"
+  gradient_clip: 1.0
+  
+  # 正则化
+  dropout: 0.1
+  early_stopping_patience: 20
+  
+  # 多任务学习
+  use_multi_task: true
+  
+  # 不确定性估计
+  use_uncertainty: true
+  num_ensemble: 5
+  
+  # 设备
+  device: "auto"
+  num_workers: 4
+  
+  # 日志
+  log_dir: "logs"
+  checkpoint_dir: "checkpoints"
+  save_every: 10
+  log_every: 100
+  
+  # WandB
+  use_wandb: true
+  project_name: "DeepLNP"
+
+# 生成配置
+generation:
+  num_candidates: 100
+  temperature: 1.0
+  top_k: 50
+  top_p: 0.95
+  
+  # 约束
+  min_mol_wt: 200
+  max_mol_wt: 1000
+  min_logp: 0
+  max_logp: 8
+  target_pka_range: [6.2, 6.8]
+  
+  # 优化
+  use_bayesian_opt: true
+  num_iterations: 50
+  acquisition_function: "ei"
+
+# 随机种子
+seed: 42

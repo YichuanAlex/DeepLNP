@@ -1,0 +1,4 @@
+candidate,reference,screens,oof_rmse_delta,oof_rmse_delta_ci_low,oof_rmse_delta_ci_high,mean_screen_spearman_delta,mean_screen_spearman_delta_ci_low,mean_screen_spearman_delta_ci_high,bootstrap_repeats,bootstrap_unit
+Validation-selected hybrid,Metadata Extra Trees,38,0.0005641984195680072,-0.003913035596065317,0.006238274460742718,,,,10000,experimental screen
+DeepLNP,Ionizable Morgan Extra Trees,38,0.00035787492500638507,-0.04090892280472906,0.027416286048981317,-0.022235023661711043,-0.10091096936662673,0.055124750757401274,10000,experimental screen
+Validation-selected hybrid,DeepLNP,38,-0.014319767967311825,-0.034177320720902946,0.0013257044452975465,0.02522177665279877,-0.0471527401362097,0.10082342286745169,10000,experimental screen

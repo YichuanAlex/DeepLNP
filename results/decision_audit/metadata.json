@@ -1,0 +1,28 @@
+{
+  "inputs": [
+    "ablation_results\\20260903_092154\\results.json",
+    "ablation_results\\20260903_092511\\results.json",
+    "ablation_results\\20260903_092831\\results.json",
+    "ablation_results\\20260903_093125\\results.json",
+    "ablation_results\\20260903_093354\\results.json",
+    "method\\benchmark_results\\matched_baselines_20260902_171216\\predictions.csv",
+    "method\\benchmark_results\\dual_head_hybrid_postfix_20260903_093428"
+  ],
+  "models": [
+    "A115_dual_rank_residual",
+    "Metadata only / Extra Trees",
+    "Ionizable Morgan + metadata / Extra Trees",
+    "validation_selected_neural_tree_hybrid"
+  ],
+  "bootstrap_unit": "experimental screen",
+  "bootstrap_repeats": 2000,
+  "ranking_scope": "within screen only",
+  "fractions": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "test_used_for_model_or_weight_selection": false,
+  "tree_predictions_reused": false,
+  "tree_predictions_status": "post-fix five-fold rerun"
+}

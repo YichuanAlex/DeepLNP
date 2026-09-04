@@ -1,0 +1,13 @@
+split,margin,available_unique_pairs
+training,0.0,9341
+training,0.05,9127
+training,0.1,8839
+training,0.2,8306
+validation,0.0,198
+validation,0.05,198
+validation,0.1,198
+validation,0.2,198
+test,0.0,1087
+test,0.05,1077
+test,0.1,1057
+test,0.2,1009

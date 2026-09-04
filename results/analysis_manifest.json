@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-09-03T13:18:14.791984+00:00",
+  "corpus_source": "merged_datasets/02_lnp_formulations/lnp_formulations_merged.csv",
+  "screen_metric_source": "results/decision_audit/per_screen.csv",
+  "fold_summary_source": "results/decision_audit/summary.csv",
+  "model_selection_changed": true,
+  "selected_neural_variant": "A115_dual_rank_residual",
+  "held_out_labels_used_for_selection": false,
+  "outputs": {
+    "figures": [
+      "application_all_screens.pdf",
+      "application_all_screens.png",
+      "application_all_screens.svg",
+      "application_screening_results.pdf",
+      "application_screening_results.png",
+      "application_screening_results.svg",
+      "data_support_and_endpoint_overlap.pdf",
+      "data_support_and_endpoint_overlap.png",
+      "data_support_and_endpoint_overlap.svg",
+      "dual_path_ablation.pdf",
+      "dual_path_ablation.png",
+      "dual_path_ablation.svg",
+      "group_size_sensitivity.pdf",
+      "group_size_sensitivity.png",
+      "group_size_sensitivity.svg",
+      "leakage_aware_workflow.pdf",
+      "leakage_aware_workflow.png",
+      "leakage_aware_workflow.svg",
+      "primary_model_performance.pdf",
+      "primary_model_performance.png",
+      "primary_model_performance.svg",
+      "split_protocol_sensitivity.pdf",
+      "split_protocol_sensitivity.png",
+      "split_protocol_sensitivity.svg"
+    ],
+    "tables": [
+      "application_all_screens.csv",
+      "application_budget_summary.csv",
+      "application_case_candidates.csv",
+      "application_case_regret_curves.csv",
+      "application_context_summary.csv",
+      "application_representative_cases.csv",
+      "claim_evidence_matrix.csv",
+      "component_support_levels.csv",
+      "corpus_support_summary.json",
+      "dual_path_ablation.csv",
+      "endpoint_counts.csv",
+      "endpoint_overlap_counts.csv",
+      "group_size_sensitivity.csv",
+      "group_size_strata.csv",
+      "held_out_screen_metrics.csv",
+      "main_model_results.csv",
+      "paired_primary_model_bootstrap.csv",
+      "primary_model_fold_metrics.csv",
+      "primary_model_screen_bootstrap.csv",
+      "primary_model_screen_metrics.csv",
+      "support_conditional_coverage.csv",
+      "support_joint_counts.csv"
+    ]
+  },
+  "support_summary": {
+    "rows": 13605,
+    "delivery_rows": 12692,
+    "all_four_structure_rows": 732,
+    "delivery_and_all_four_structure_rows": 0,
+    "efficacy_experimental_groups": 38,
+    "source_counts": {
+      "LNP_ML": 12692,
+      "LNP_Atlas": 913
+    },
+    "support_definitions": {
+      "Any reported composition/process field": "logical OR across available composition and process fields; not complete process coverage",
+      "Biological target": "raw delivery_target or a non-empty biodistribution_result/gene_expression_result field in bioactivity_profile"
+    }
+  },
+  "group_size_rows": 152,
+  "model_rows": 4,
+  "paired_comparison_rows": 3,
+  "application_screen_rows": 38,
+  "application_case_rows": 3,
+  "claim_rows": 7
+}

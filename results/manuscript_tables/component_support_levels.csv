@@ -1,0 +1,5 @@
+role,active_rows,identity_known_rows,graph_resolved_rows,active_and_graph_resolved_rows,unique_reported_identities,unique_graphs,delivery_active_rows,delivery_identity_known_rows,delivery_graph_resolved_rows,delivery_active_and_graph_resolved_rows,delivery_unique_reported_identities,delivery_unique_graphs
+ionizable,13604,13605,13600,13599,9641,9441,12692,12692,12692,12692,9377,9194
+helper,13040,13521,13498,13006,27,17,12133,12620,12620,12133,4,4
+cholesterol,12994,12995,12991,12990,9,5,12093,12093,12093,12093,1,1
+peg,12921,909,779,766,34,26,12021,0,0,0,0,0

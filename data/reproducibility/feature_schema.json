@@ -1,0 +1,144 @@
+{
+  "context_dimension": 26,
+  "context_blocks": {
+    "cargo": [
+      "mrna",
+      "sirna",
+      "pdna",
+      "other",
+      "missing"
+    ],
+    "model": [
+      "hela",
+      "raw264p7",
+      "mouse",
+      "igrov1",
+      "hek293t",
+      "a549",
+      "hbec_ali",
+      "bmdm",
+      "bdmc",
+      "other",
+      "missing"
+    ],
+    "route": [
+      "in_vitro",
+      "intravenous",
+      "intramuscular",
+      "intratracheal",
+      "other",
+      "missing"
+    ],
+    "source": [
+      "lnp_ml",
+      "lnp_atlas",
+      "other",
+      "missing"
+    ]
+  },
+  "source_block_policy": "four zero constants in the selected model; source identifiers are not exposed",
+  "categorical_encoding": "closed-vocabulary one-hot; unseen nonempty values map to other; empty values map to missing",
+  "formulation_process_dimension": 28,
+  "formulation_process_fields": {
+    "cationic_lipid_mol_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 775,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "phospholipid_mol_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 775,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "cholesterol_mol_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 775,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "peg_lipid_mol_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 775,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "cationic_lipid_mass_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 95,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "phospholipid_mass_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 95,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "cholesterol_mass_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 95,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "peg_lipid_mass_ratio": {
+      "scale_divisor": 100.0,
+      "observed_rows": 95,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "cationic_lipid_to_mrna_weight_ratio": {
+      "scale_divisor": 20.0,
+      "observed_rows": 640,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "np_ratio": {
+      "scale_divisor": 30.0,
+      "observed_rows": 0,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "aqueous_organic_ratio": {
+      "scale_divisor": 5.0,
+      "observed_rows": 123,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "total_flow_rate": {
+      "scale_divisor": 20.0,
+      "observed_rows": 110,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "microfluidic_mixing": {
+      "scale_divisor": 1.0,
+      "observed_rows": 769,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    },
+    "dose_mg_kg": {
+      "scale_divisor": 10.0,
+      "observed_rows": 106,
+      "imputation": "zero after scaling",
+      "observed_indicator": true
+    }
+  },
+  "continuous_imputation": "zero after fixed unit scaling, paired with an observed indicator unless ablated",
+  "normalization": "endpoint mean and standard deviation fitted on training indices only; input scaling uses fixed physical divisors",
+  "target_dimension": 11,
+  "target_vocabulary": [
+    "generic_cell",
+    "macrophage",
+    "liver",
+    "muscle",
+    "lung",
+    "lung_epithelium",
+    "spleen",
+    "tumor",
+    "brain",
+    "other",
+    "missing"
+  ]
+}

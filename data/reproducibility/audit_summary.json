@@ -1,0 +1,17 @@
+{
+  "rows": 775,
+  "split_rows": {
+    "training": 614,
+    "validation": 53,
+    "test": 108
+  },
+  "split_groups": {
+    "training": 39,
+    "validation": 9,
+    "test": 10
+  },
+  "group_overlap": 0,
+  "toxicity_rows": 99,
+  "toxicity_groups": 2,
+  "raw_data_redistributed": false
+}

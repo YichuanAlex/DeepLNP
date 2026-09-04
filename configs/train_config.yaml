@@ -1,0 +1,112 @@
+training:
+  num_epochs: 200
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  lr_scheduler: "cosine"
+  lr_min: 0.00001
+  warmup_epochs: 3
+  early_stopping:
+    enabled: true
+    patience: 50
+    min_delta: 0.0005
+  gradient_clip: 1.0
+  use_amp: true
+  gradient_accumulation_steps: 1
+  # R12/A27 validation-selected setting. Ranking gradients are confined to a
+  # residual adapter and do not perturb the calibrated point-regression head.
+  ranking_weight: 2.0
+  ranking_margin: 0.1
+  target_aux_weight: 0.2
+  evaluate_test_each_epoch: false
+
+model:
+  mol_encoder_type: "graph"
+  mol_feat_dim: 256
+  atom_feat_dim: 39
+  bond_feat_dim: 4
+  num_gnn_layers: 4
+  transformer_layers: 4
+  transformer_embed_dim: 512
+  transformer_heads: 8
+  use_3d: false
+  struct_feat_dim: 256
+  use_images: false
+  image_feat_dim: 256
+  image_channels: 3
+  image_size: 128
+  use_embeddings: true
+  embedding_feat_dim: 256
+  max_embedding_dim: 2048
+  formul_feat_dim: 128
+  num_components: 4
+  formulation_input_dim: 28
+  context_feat_dim: 26
+  target_feat_dim: 11
+  num_target_classes: 11
+  spatial_feat_dim: 12
+  use_component_transformer: true
+  # R16 streamlined selection: the learned pair bias did not improve the
+  # leakage-safe validation frontier once spatial descriptors were retained.
+  use_pair_bias: false
+  use_target_conditioning: true
+  use_spatial_features: true
+  use_ratio_features: true
+  # Ablation-selected A3: linear ratio encoding; RBF/noise degraded validation.
+  use_gaussian_ratio: false
+  formulation_noise_std: 0.0
+  use_explicit_features: false
+  # The four-bit structure mask perfectly identifies source in this corpus;
+  # keep validity masking in graph computation but do not expose it as a feature.
+  use_structure_mask_features: false
+  explicit_fusion_mode: "residual"
+  explicit_gate_init: -3.0
+  use_separate_rank_head: true
+  rank_head_mode: "residual"
+  rank_detach_backbone: true
+  rank_gate_init: -1.0
+  physchem_feat_dim: 128
+  fusion_hidden_dim: 256
+  fusion_num_heads: 8
+  fusion_dropout: 0.15
+  num_experts: 4
+  prediction_hidden_dim: 128
+  num_tasks: 6
+  use_mc_dropout: false
+  mc_dropout_rate: 0.1
+
+dataset:
+  merged_datasets_dir: "merged_datasets"
+  modalities:
+    - "formulation"
+  sample_fraction: 1.0
+  random_seed: 42
+  split_strategy: "group"
+  # R18: ETKDG shape terms degraded the matched group-split validation result;
+  # the model still receives the six deterministic 2D descriptor channels.
+  use_spatial: false
+  include_source_context: false
+  use_mechanistic_descriptors: false
+  target_encoding: "onehot"
+  balanced_sampling: true
+  ensure_rare_task_holdout: true
+  num_workers: 0
+  max_atoms: 256
+  fingerprint_dim: 2048
+  image_size: 128
+
+checkpoint:
+  save_dir: "checkpoints"
+  save_every: 10
+  keep_last_n: 3
+  save_best: true
+
+logging:
+  use_wandb: false
+  use_tensorboard: false
+  wandb_project: "DeepLNP"
+  tensorboard_dir: "tensorboard_logs"
+  log_dir: "logs"
+
+evaluation:
+  result_dir: "evaluation_results"

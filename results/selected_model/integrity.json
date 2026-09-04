@@ -1,0 +1,145 @@
+{
+  "created_utc": "2026-09-03T01:34:26.441477+00:00",
+  "inputs": [
+    "ablation_results\\20260902_173452",
+    "ablation_results\\20260902_175252",
+    "ablation_results\\20260902_181417",
+    "ablation_results\\20260902_183200",
+    "ablation_results\\20260902_185251",
+    "ablation_results\\20260902_215232",
+    "ablation_results\\20260902_220202",
+    "ablation_results\\20260902_220935",
+    "ablation_results\\20260902_221659",
+    "ablation_results\\20260902_222358",
+    "ablation_results\\20260902_222948",
+    "ablation_results\\20260902_223610",
+    "ablation_results\\20260902_224450",
+    "ablation_results\\20260902_225239",
+    "ablation_results\\20260902_225847",
+    "ablation_results\\20260903_092154",
+    "ablation_results\\20260903_092511",
+    "ablation_results\\20260903_092831",
+    "ablation_results\\20260903_093125",
+    "ablation_results\\20260903_093354"
+  ],
+  "folds": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "oof_efficacy_rows": 12692,
+  "coverage": {
+    "A101_efficacy_only_pareto": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A102_no_rank_adapter_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A103_no_component_attention_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A104_no_biological_context_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A105_no_physical_endpoints_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A106_no_target_auxiliary_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A107_no_spatial_descriptors_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A108_no_sterol_structure_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A109_ionizable_only_matched": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A110_direct_morgan_replace": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A111_direct_morgan_residual": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A112_direct_morgan_rank_only": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A113_direct_rank_no_biological_context": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A114_direct_rank_no_descriptors": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A115_dual_rank_residual": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A79_validation_pareto_checkpoint": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A80_centered_morgan_residual": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    },
+    "A85_listwise_morgan_pareto": {
+      "rows": 12692,
+      "unique_rows": 12692,
+      "groups": 38
+    }
+  },
+  "test_used_for_selection": false,
+  "merged_dataset_sha256": "49f902ff6d40de89915e2f2b3e09ff23dbc76f203f802c8d64ce3702cfc02e90",
+  "loader_sha256": "09fbb77dc73dd02ad10233d29e5247e1f76e2a0b9b93c7f4ea4213cddb3cce5b",
+  "predictor_sha256": "8cc7626e6f04c67be58a570aaa7a444ab81879c387bf38f2128d73f48fda6040",
+  "runner_sha256": "69aa8336f52706540c8634e42e87f0e81d362a87ca2b43839ec268fa3161505f"
+}

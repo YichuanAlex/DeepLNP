@@ -1,0 +1,2 @@
+censor_type,rows,minimum_risk_bound,maximum_risk_bound,unit
+upper bound,99,0.09999999999999998,0.15000000000000002,dimensionless risk fraction (1 - cell viability fraction)

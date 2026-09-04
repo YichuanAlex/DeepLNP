@@ -1,0 +1,10 @@
+target_class,rows,efficacy,groups
+dendritic_cell,1,1,1
+generic_cell,435,435,15
+liver,54,44,11
+lung,100,2,6
+lung_epithelium,86,86,5
+macrophage,43,43,1
+muscle,20,20,3
+other,26,0,15
+spleen,10,9,3

@@ -1,0 +1,8 @@
+claim,required_validation,current_evidence,permitted_interpretation
+Candidate ranking within a completed screen,"Held-out, screen-local ranking and selection metrics",Supported retrospectively,Retrospective screening performance
+Relative endpoint prediction in a new experimental group,Group-disjoint held-out screens,Partial; 38 efficacy screens,Limited prediction under group shift
+Absolute efficacy of an isolated new candidate,"Cross-screen commensurate, unstandardized outcomes",Not supported,No absolute prospective calibration claim
+Joint optimization of four lipid structures,Complete four-role structures with delivery labels,Not supported; 0 overlapping records,"Role-aware interface, not validated optimization"
+Safety prediction,Independent multi-group toxicity labels in test data,Not supported; sparse bounded labels,Censored-endpoint diagnostic only
+Applicability-domain abstention,Monotonic risk reduction as low-support cases are rejected,Not supported by frozen risk-coverage analysis,No validated abstention rule
+Prospective discovery,Blinded wet-lab validation after model freezing,Not tested,No prospective discovery claim
