@@ -1,0 +1,8 @@
+feature_block,Delivery,Size,PDI,Zeta,Encapsulation,Toxicity
+Ionizable graph resolved,12692.0,900.0,644.0,263.0,565.0,99.0
+Helper graph resolved,12620.0,870.0,635.0,249.0,559.0,99.0
+Sterol graph resolved,12093.0,890.0,644.0,264.0,565.0,99.0
+PEG-lipid graph resolved,0.0,771.0,516.0,232.0,534.0,99.0
+Any reported composition/process field,12692.0,905.0,649.0,265.0,570.0,99.0
+Biological target,12692.0,770.0,607.0,240.0,477.0,99.0
+Experimental group,12692.0,905.0,649.0,265.0,570.0,99.0

@@ -1,0 +1,15 @@
+{
+  "rows": 13605,
+  "delivery_rows": 12692,
+  "all_four_structure_rows": 732,
+  "delivery_and_all_four_structure_rows": 0,
+  "efficacy_experimental_groups": 38,
+  "source_counts": {
+    "LNP_ML": 12692,
+    "LNP_Atlas": 913
+  },
+  "support_definitions": {
+    "Any reported composition/process field": "logical OR across available composition and process fields; not complete process coverage",
+    "Biological target": "raw delivery_target or a non-empty biodistribution_result/gene_expression_result field in bioactivity_profile"
+  }
+}
